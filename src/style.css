@@ -1,4 +1,5 @@
 * {
+  color: antiquewhite;
   margin: 0;
   padding: 0;
 }
@@ -20,9 +21,9 @@ body,
 
 #header {
   grid-area: header;
-  padding: 26px;
+  padding: 26px 40px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: #6497b1;
 }
@@ -34,6 +35,26 @@ body,
 .second-title {
   margin-left: 10px;
   font-size: 24px;
+}
+
+#tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.tab {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.tab:hover {
+  font-size: 20px;
+  text-decoration: underline;
+  text-decoration-color: darkgoldenrod;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px;
 }
 
 #main {
