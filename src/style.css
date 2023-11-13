@@ -57,6 +57,14 @@ body,
   text-underline-offset: 8px;
 }
 
+.tab.active {
+  font-size: 20px;
+  text-decoration: underline;
+  text-decoration-color: antiquewhite;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px;
+}
+
 #main {
   grid-area: main;
   background-color: #6497b1;

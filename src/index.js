@@ -43,6 +43,24 @@ const handleTabs = function () {
   return tabsDiv;
 };
 
+const addTabsEventListener = function () {
+  const tabs = document.querySelectorAll(".tab");
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", (e) => {
+      handleTabSelection(e.target);
+    });
+  });
+};
+
+const handleTabSelection = function (tab) {
+  const oldTab = document.querySelector(".active");
+  if (oldTab != null) {
+    oldTab.classList.remove("active");
+  }
+
+  tab.classList.add("active");
+};
+
 const handleMainDivs = (function () {
   const contentDiv = document.getElementById("content");
 
@@ -61,4 +79,5 @@ const handleHeader = (function () {
 
   headerDiv.appendChild(handleTitle());
   headerDiv.appendChild(handleTabs());
+  addTabsEventListener();
 })();
