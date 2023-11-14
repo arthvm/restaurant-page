@@ -1,4 +1,5 @@
 import "./style.css";
+import homeTab from "./home.js";
 
 const handleTitle = function () {
   const pageTitle = document.createElement("div");
@@ -66,9 +67,11 @@ const handleTabSelection = function (tab) {
 };
 
 const handleTabSwitching = function (tab) {
+  clearMainDiv();
+
   switch (tab.id) {
     case "home-tab":
-      console.log("On Home Tab");
+      homeTab();
       break;
 
     case "menu-tab":
@@ -78,6 +81,14 @@ const handleTabSwitching = function (tab) {
     case "about-tab":
       console.log("On About Tab");
       break;
+  }
+};
+
+const clearMainDiv = function () {
+  const mainDiv = document.getElementById("main");
+
+  while (mainDiv.firstChild) {
+    mainDiv.removeChild(mainDiv.lastChild);
   }
 };
 

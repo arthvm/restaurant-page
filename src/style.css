@@ -67,5 +67,54 @@ body,
 
 #main {
   grid-area: main;
+  padding: 20px 50px;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  grid-template-columns: 2fr 2fr;
+  grid-template-areas:
+    "prime fill"
+    "prime fill";
   background-color: #6497b1;
+}
+
+#hero-content {
+  grid-area: prime;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 60px;
+}
+
+.hero-text {
+  padding: 0px 20px;
+  margin-left: 30px;
+  font-size: 50px;
+}
+
+.hero-btn {
+  border: 1px solid antiquewhite;
+  border-radius: 8px;
+  background-color: #6497b1;
+  margin-left: 80px;
+  width: 180px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: antiquewhite;
+}
+
+#hero-img {
+  grid-area: fill;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.cookie-img {
+  height: 450px;
+}
+
+#hero-img {
+  grid-area: fill;
 }
