@@ -26,19 +26,19 @@ const handleTabs = function () {
   homeTab.classList.add("tab");
   homeTab.setAttribute("id", "home-tab");
 
-  const aboutTab = document.createElement("h2");
-  aboutTab.textContent = "About Us";
-  aboutTab.classList.add("tab");
-  aboutTab.setAttribute("id", "about-tab");
-
   const menuTab = document.createElement("h2");
   menuTab.textContent = "Menu";
   menuTab.classList.add("tab");
   menuTab.setAttribute("id", "menu-tab");
 
+  const aboutTab = document.createElement("h2");
+  aboutTab.textContent = "About Us";
+  aboutTab.classList.add("tab");
+  aboutTab.setAttribute("id", "about-tab");
+
   tabsDiv.appendChild(homeTab);
-  tabsDiv.appendChild(aboutTab);
   tabsDiv.appendChild(menuTab);
+  tabsDiv.appendChild(aboutTab);
 
   return tabsDiv;
 };
@@ -47,7 +47,11 @@ const addTabsEventListener = function () {
   const tabs = document.querySelectorAll(".tab");
   tabs.forEach((tab) => {
     tab.addEventListener("click", (e) => {
-      handleTabSelection(e.target);
+      const currentTab = document.querySelector(".active");
+      if (currentTab != e.target) {
+        handleTabSelection(e.target);
+        handleTabSwitching(e.target);
+      }
     });
   });
 };
@@ -59,6 +63,22 @@ const handleTabSelection = function (tab) {
   }
 
   tab.classList.add("active");
+};
+
+const handleTabSwitching = function (tab) {
+  switch (tab.id) {
+    case "home-tab":
+      console.log("On Home Tab");
+      break;
+
+    case "menu-tab":
+      console.log("On Menu Tab");
+      break;
+
+    case "about-tab":
+      console.log("On About Tab");
+      break;
+  }
 };
 
 const handleMainDivs = (function () {
@@ -80,4 +100,10 @@ const handleHeader = (function () {
   headerDiv.appendChild(handleTitle());
   headerDiv.appendChild(handleTabs());
   addTabsEventListener();
+})();
+
+const startSelection = (function () {
+  const homeTab = document.getElementById("home-tab");
+  handleTabSelection(homeTab);
+  handleTabSwitching(homeTab);
 })();
