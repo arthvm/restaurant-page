@@ -162,3 +162,20 @@ body,
   color: antiquewhite;
   cursor: pointer;
 }
+
+#about-div,
+#about-text-div {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+#about-text-div {
+  width: 800px;
+}
+
+.about-text {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}

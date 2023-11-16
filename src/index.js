@@ -1,6 +1,7 @@
 import "./style.css";
 import homeTab from "./home.js";
 import menuTab from "./menu.js";
+import aboutTab from "./about.js";
 
 const handleTitle = function () {
   const pageTitle = document.createElement("div");
@@ -80,7 +81,7 @@ const handleTabSwitching = function (tab) {
       break;
 
     case "about-tab":
-      console.log("On About Tab");
+      aboutTab();
       break;
   }
 };
