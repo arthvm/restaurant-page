@@ -1,5 +1,6 @@
 import "./style.css";
 import homeTab from "./home.js";
+import menuTab from "./menu.js";
 
 const handleTitle = function () {
   const pageTitle = document.createElement("div");
@@ -75,7 +76,7 @@ const handleTabSwitching = function (tab) {
       break;
 
     case "menu-tab":
-      console.log("On Menu Tab");
+      menuTab();
       break;
 
     case "about-tab":

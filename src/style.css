@@ -67,18 +67,24 @@ body,
 
 #main {
   grid-area: main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px 50px;
+  background-color: #6497b1;
+}
+
+#home-div {
   display: grid;
   grid-template-rows: 3fr 1fr;
   grid-template-columns: 2fr 2fr;
   grid-template-areas:
-    "prime fill"
-    "prime fill";
-  background-color: #6497b1;
+    "home-hero home-img"
+    "home-hero home-img";
 }
 
-#hero-content {
-  grid-area: prime;
+#home-hero {
+  grid-area: home-hero;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -101,10 +107,11 @@ body,
   font-size: 20px;
   font-weight: bold;
   color: antiquewhite;
+  cursor: pointer;
 }
 
 #hero-img {
-  grid-area: fill;
+  grid-area: home-img;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,6 +122,43 @@ body,
   height: 450px;
 }
 
-#hero-img {
-  grid-area: fill;
+#menu-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 5fr 1fr;
+  grid-template-areas:
+    "menu-text menu-text"
+    "menu-btn menu-btn";
+}
+
+#menu-text-div {
+  grid-area: menu-text;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-text {
+  font-size: 41px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#menu-btn-div {
+  grid-area: menu-btn;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-btn {
+  border: 1px solid antiquewhite;
+  border-radius: 8px;
+  background-color: #6497b1;
+  width: 180px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: antiquewhite;
+  cursor: pointer;
 }

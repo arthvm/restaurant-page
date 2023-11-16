@@ -4,18 +4,22 @@ import cookieImg from "./img/cookie-img.png";
 const handleDivs = function () {
   const contentDiv = document.getElementById("main");
 
-  const textDiv = document.createElement("div");
-  textDiv.setAttribute("id", "hero-content");
+  const homeTabDiv = document.createElement("div");
+  homeTabDiv.setAttribute("id", "home-div");
+  contentDiv.appendChild(homeTabDiv);
+
+  const heroDiv = document.createElement("div");
+  heroDiv.setAttribute("id", "home-hero");
 
   const imageDiv = document.createElement("div");
   imageDiv.setAttribute("id", "hero-img");
 
-  contentDiv.appendChild(textDiv);
-  contentDiv.appendChild(imageDiv);
+  homeTabDiv.appendChild(heroDiv);
+  homeTabDiv.appendChild(imageDiv);
 };
 
 const handleText = function () {
-  const heroDiv = document.getElementById("hero-content");
+  const heroDiv = document.getElementById("home-hero");
 
   const heroText = document.createElement("h3");
   heroText.classList.add("hero-text");
@@ -36,7 +40,7 @@ const handleImage = function () {
 };
 
 const handleBtn = function () {
-  const heroDiv = document.getElementById("hero-content");
+  const heroDiv = document.getElementById("home-hero");
 
   const heroBtn = document.createElement("button");
   heroBtn.classList.add("hero-btn");
